@@ -39,6 +39,16 @@ modules:
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
        - mesa-va-drivers-freeworld
+       - kmod-ayaneo-platform
+       - kmod-ayn-platform
+       - kmod-bmi260
+       - kmod-framework-laptop
+       - kmod-gcadapter_oc
+       - kmod-nct6687d
+       - kmod-openrazer
+       - kmod-vhba
+       - kmod-wl
+       - kmod-zenergy
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
