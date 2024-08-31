@@ -16,9 +16,7 @@ image-version: 40
 #        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
                        # put configuration files you want in /usr/etc/ inside the image
                        # while putting files in /etc/ is done on booted system by system administrators.
-                       # read more about this in files module reference.
-                       
-# Make sure rpmfusion is installed before installing rest of the packages. Requires specifying version number.                    
+                       # read more about this in files module reference.   
   - type: rpm-ostree
     install:
        - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
@@ -54,8 +52,7 @@ image-version: 40
        - pipewire-codec-aptx
        - https://github.com/ilya-zlobintsev/LACT/releases/download/test-build/lact-0.5.5-0.x86_64.fedora-40.rpm
        - https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.15.1/heroic-2.15.1.x86_64.rpm
-       
-# Remove ffmpeg-free and it's dependencies.  
+        
     remove:
        - ffmpeg-free
        - libavcodec-free
