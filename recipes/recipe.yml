@@ -18,7 +18,7 @@ image-version: 40
                        # while putting files in /etc/ is done on booted system by system administrators.
                        # read more about this in files module reference.
                        
-  # Make sure rpmfusion is installed before installing rest of the packages. Requires specifying version number.                    
+# Make sure rpmfusion is installed before installing rest of the packages. Requires specifying version number.                    
   - type: rpm-ostree
     install:
        - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
@@ -55,7 +55,7 @@ image-version: 40
        - https://github.com/ilya-zlobintsev/LACT/releases/download/test-build/lact-0.5.5-0.x86_64.fedora-40.rpm
        - https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.15.1/heroic-2.15.1.x86_64.rpm
        
-    # Remove ffmpeg-free and it's dependencies.  
+# Remove ffmpeg-free and it's dependencies.  
     remove:
        - ffmpeg-free
        - libavcodec-free
