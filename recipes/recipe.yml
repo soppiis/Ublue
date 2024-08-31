@@ -19,10 +19,8 @@ modules:
                        # read more about this in files module reference.
   - type: rpm-ostree
     install:
-       #- https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
-       #- https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
-       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
+       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
 
   - type: rpm-ostree
     repos:
@@ -47,19 +45,22 @@ modules:
        - steam
        - distrobox
        - fastfetch
-       - ffmpeg
        - displaycal
+       - ffmpeg
        - https://github.com/ilya-zlobintsev/LACT/releases/download/test-build/lact-0.5.5-0.x86_64.fedora-40.rpm
        - https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.15.1/heroic-2.15.1.x86_64.rpm
 
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      # - mesa-va-drivers-freeworld
        - ffmpeg-free
-       
+       - libavcodec-free
+       - libavdevice-free
+       - libavfilter-free
+       - libavformat-free
+       - libavutil-free
+       - libpostproc-free
+       - libswresample-free
+       - libswscale-free
+
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
