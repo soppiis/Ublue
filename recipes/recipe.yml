@@ -34,7 +34,7 @@ modules:
        #- firefox
        - android-tools
        - syncthing
-       - wezterm
+       #- wezterm
        - zoxide
        - bat
        - eza
