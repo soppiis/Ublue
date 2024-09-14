@@ -26,7 +26,7 @@ modules:
     repos:
        - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
        - https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/repo/fedora-%OS_VERSION%/kylegospo-bazzite-multilib-fedora-%OS_VERSION%.repo?arch=x86_64
-       - https://copr.fedorainfracloud.org/coprs/ngompa/DisplayCAL/repo/fedora-%OS_VERSION%/ngompa-DisplayCAL-fedora-%OS_VERSION%.repo
+       #- https://copr.fedorainfracloud.org/coprs/ngompa/DisplayCAL/repo/fedora-%OS_VERSION%/ngompa-DisplayCAL-fedora-%OS_VERSION%.repo
 
     install:
        - iscsi-initiator-utils
@@ -45,13 +45,14 @@ modules:
        - steam
        - distrobox
        - fastfetch
-       - displaycal
+       #- displaycal
        - ffmpeg
        - lm_sensors
        - nvtop
        - pipewire-codec-aptx
        - yt-dlp
        - vim
+       - podman-compose
        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.5.5/lact-0.5.5-0.x86_64.fedora-40.rpm
        #- https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.15.1/heroic-2.15.1.x86_64.rpm
 
