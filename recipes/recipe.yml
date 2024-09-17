@@ -5,7 +5,7 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: quay.io/fedora-ostree-desktops/kinoite
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: 40 # https://gitlab.com/fedora/ostree/ci-test
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -17,7 +17,7 @@ modules:
                        # put configuration files you want in /usr/etc/ inside the image
                        # while putting files in /etc/ is done on booted system by system administrators.
                        # read more about this in files module reference.
-  - type: rpm-ostree
+  - type: rpm-ostree # install rpmfusion before rest of the packages.
     install:
        - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
        - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
@@ -52,10 +52,8 @@ modules:
        - pipewire-codec-aptx
        - yt-dlp
        - vim
-       - podman-compose
        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.5.5/lact-0.5.5-0.x86_64.fedora-40.rpm
-       #- https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.15.1/heroic-2.15.1.x86_64.rpm
-
+       
     remove:
        - ffmpeg-free
        - libavcodec-free
