@@ -52,6 +52,7 @@ modules:
        - pipewire-codec-aptx
        - yt-dlp
        - vim
+       - just
        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.5.5/lact-0.5.5-0.x86_64.fedora-40.rpm
        
     remove:
