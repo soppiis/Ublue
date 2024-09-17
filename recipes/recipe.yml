@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue
+name: Kinoite
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
@@ -53,6 +53,7 @@ modules:
        - yt-dlp
        - vim
        - just
+       - podman-compose
        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.5.5/lact-0.5.5-0.x86_64.fedora-40.rpm
        
     remove:
