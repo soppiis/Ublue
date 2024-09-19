@@ -27,7 +27,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
   systemctl reboot
   ```
-- Rebase using bootc (Fedora 41+)
+- Upgrade using bootc to new image (Fedora 41+)
   ```
   bootc switch ghcr.io/soppiis/kinoite
   ```
